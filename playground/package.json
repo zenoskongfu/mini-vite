@@ -5,12 +5,17 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "mini-vite"
+		"start": "mini-vite --entry src/index.tsx",
+		"help": "mini-vite --help"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"mini-vite": "../"
+		"@types/react": "^18.2.38",
+		"@types/react-dom": "^18.2.17",
+		"mini-vite": "../",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
 	}
 }

@@ -8,8 +8,9 @@ const cli = cac();
 cli.command("[root]", "Run the development server")
 	.alias("serve")
 	.alias("dev")
-	.action(async () => {
-		await startDevServer();
+	.option("--entry, --entryPath <path>", "input entry path")
+	.action(async (command, options) => {
+		await startDevServer(options.entry || "src/index.ts");
 	});
 
 cli.help();
